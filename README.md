@@ -5,7 +5,7 @@ Simple Windows 98 themed draggable window react component.
 
 
 
-`
+```
 import Window98 from 'React-NinetyEight'
 
 <Window98
@@ -14,7 +14,7 @@ title="Pay me epitath records!"
 actions={['close']}
 icon={reactIcon}
 />
-`
+```
 
 
 # Attributes
