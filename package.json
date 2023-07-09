@@ -1,0 +1,28 @@
+{
+  "name": "react-ninetyeight",
+  "version": "1.0.0",
+  "description": "Simple windows 98 themed typescript react component",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyfee/React-NinetyEight.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "ui"
+  ],
+  "author": "Tyfee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tyfee/React-NinetyEight/issues"
+  },
+  "homepage": "https://github.com/Tyfee/React-NinetyEight#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-ninetyeight": "file:"
+  }
+}
