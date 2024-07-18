@@ -60,8 +60,10 @@ const Button = (props: any) => {
   return (
     <div style={buttonStyles}>
       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11">
-      <path fill="#000000" d= {props.inside}/>
-     
+      <g transform="translate(0.000000,9.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+      <path fill="#000000" d={props.inside}/>
+     </g>
       </svg>
          </div>
   )
@@ -110,18 +112,16 @@ const titleStyles = {
 
 
 const svgData = {
-  closeIcon: "",
-  minimizeIcon: "",
-  maximizeIcon: ""
+  close: "M24 71 c15 -16 15 -19 1 -31 -9 -7 -13 -15 -10 -18 2 -3 11 1 20 8 12 10 18 10 30 0 9 -7 18 -11 20 -8 3 3 -1 11 -10 18 -14 12 -14 15 1 31 19 21 6 27 -14 7 -9 -9 -15 -9 -24 0 -20 20 -33 14 -14 -7z",
+  maximize: "M10 50 c0 -40 0 -40 40 -40 40 0 40 0 40 40 0 40 0 40 -40 40 -40 0 -40 0 -40 -40z m70 -5 c0 -21 -5 -25 -30 -25 -25 0 -30 4 -30 25 0 21 5 25 30 25 25 0 30 -4 30 -25z",
+  minimize: "M33 23 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -17 0 -22 -2 -12 -5z"
 }
 
 
-const a = props.options?.map((i) => <Option option={i}/> )
+const a = props.options?.map((i: any) => <Option option={i}/> )
 
 
-const b = props.actions?.map((i) => <Button inside={`M24 71 c15 -16 15 -19 1 -31 -9 -7 -13 -15 -10 -18 2 -3 11 1 20 8
-12 10 18 10 30 0 9 -7 18 -11 20 -8 3 3 -1 11 -10 18 -14 12 -14 15 1 31 19
-21 6 27 -14 7 -9 -9 -15 -9 -24 0 -20 20 -33 14 -14 -7z`}/>)
+const b = props.actions?.map((action: string, index: number) => <Button key={index} inside={svgData[action]}/>)
 return(
 
     <>

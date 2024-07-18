@@ -1,6 +1,6 @@
 {
   "name": "react-ninetyeight",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Simple windows 98 themed typescript react component",
   "main": "index.tsx",
   "scripts": {
