@@ -113,7 +113,7 @@ const titleStyles = {
 const a = props.options?.map((i) => <Option option={i}/> )
 
 
-const b = props.actions?.map((i) => <Button inside={`https://raw.githubusercontent.com/Tyfee/React-NinetyEight/main/assets/${i}-icon.png`}/>)
+const b = props.actions?.map((i) => <Button inside={`./assets/${i}-icon.png`}/>)
 return(
 
     <>
