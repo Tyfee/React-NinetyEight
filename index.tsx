@@ -4,7 +4,6 @@ import { useRef, useCallback } from 'react'
 import './styles.css'
 
 
-
 const Window98 = (props: any) => {
 
     const draggable = props.draggable
@@ -60,7 +59,10 @@ const Window98 = (props: any) => {
 const Button = (props: any) => {
   return (
     <div style={buttonStyles}>
-      <img style={{marginBottom: "28%"}} src={props.inside}></img>
+      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11">
+      <path fill="#000000" d= {props.inside}/>
+     
+      </svg>
          </div>
   )
 }
@@ -71,7 +73,7 @@ const optionStyle ={fontSize: "14px", padding: "",color: "black", backgroundColo
 const Option = (props: any) => {
     return (
       <>
-      <div class="option" style={optionStyle}>
+      <div className="option" style={optionStyle}>
         <a style={{fontFamily: "sans-serif",padding: "5px", color: "black"}}>{props.option}</a>
            </div>
         </>
@@ -107,13 +109,19 @@ const titleStyles = {
 }
 
 
-
+const svgData = {
+  closeIcon: "",
+  minimizeIcon: "",
+  maximizeIcon: ""
+}
 
 
 const a = props.options?.map((i) => <Option option={i}/> )
 
 
-const b = props.actions?.map((i) => <Button inside={`./assets/${i}-icon.png`}/>)
+const b = props.actions?.map((i) => <Button inside={`M24 71 c15 -16 15 -19 1 -31 -9 -7 -13 -15 -10 -18 2 -3 11 1 20 8
+12 10 18 10 30 0 9 -7 18 -11 20 -8 3 3 -1 11 -10 18 -14 12 -14 15 1 31 19
+21 6 27 -14 7 -9 -9 -15 -9 -24 0 -20 20 -33 14 -14 -7z`}/>)
 return(
 
     <>
